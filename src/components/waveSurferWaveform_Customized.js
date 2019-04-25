@@ -4,7 +4,7 @@ import WaveSurfer from 'wavesurfer.js'
 import RegionsPlugin from "wavesurfer.js/src/plugin/regions";
 import CursorPlugin from "wavesurfer.js/src/plugin/cursor";
 import TimelinePlugin from "wavesurfer.js/src/plugin/timeline";
-import { bufferToWave, copy, cut, paste } from "../utils/waveSurferOperation";
+import { copy, cut, paste } from "../utils/waveSurferOperation";
 export default class WaveSurferWaveform extends React.Component {
   constructor(props) {
     super(props)
@@ -16,18 +16,19 @@ export default class WaveSurferWaveform extends React.Component {
     this.handleTogglePlay = this.handleTogglePlay.bind(this);
     this.handlePosChange = this.handlePosChange.bind(this);
 
+
+    /**
+     * Variables.
+     */
+    this.contextMenuClassName = "context-menu";
+    this.contextMenuItemClassName = "context-menu__item";
+    this.contextMenuLinkClassName = "context-menu__link";
+    this.contextMenuActive = "context-menu--active";
+
+    this.taskItemClassName = "wavesurfer-region";
+
   }
   selectedRegion=null
-
-  /**
-   * Variables.
-   */
-  contextMenuClassName = "context-menu";
-  contextMenuItemClassName = "context-menu__item";
-  contextMenuLinkClassName = "context-menu__link";
-  contextMenuActive = "context-menu--active";
-
-  taskItemClassName = "wavesurfer-region";
 
   taskItemInContext;
 
@@ -240,7 +241,7 @@ export default class WaveSurferWaveform extends React.Component {
     if ( (this.mwindowHeight - this.mclickCoordsY) < this.menuHeight ) {
       this.menu.style.top = this.windowHeight - this.menuHeight + "px";
     } else {
-      this.menu.style.top = this.clickCoordsY + "px";
+     this.menu.style.top = this.clickCoordsY + "px";
     }
   }
 
@@ -298,11 +299,65 @@ export default class WaveSurferWaveform extends React.Component {
   // Convert a audio-buffer segment to a Blob using WAVE representation
   // The returned Object URL can be set directly as a source for an Auido element.
 
+  bufferToWave(abuffer, offset, len) {
+
+    var numOfChan = abuffer.numberOfChannels,
+      length = len * numOfChan * 2 + 44,
+      buffer = new ArrayBuffer(length),
+      view = new DataView(buffer),
+      channels = [], i, sample,
+      pos = 0;
+
+    // write WAVE header
+    setUint32(0x46464952);                         // "RIFF"
+    setUint32(length - 8);                         // file length - 8
+    setUint32(0x45564157);                         // "WAVE"
+
+    setUint32(0x20746d66);                         // "fmt " chunk
+    setUint32(16);                                 // length = 16
+    setUint16(1);                                  // PCM (uncompressed)
+    setUint16(numOfChan);
+    setUint32(abuffer.sampleRate);
+    setUint32(abuffer.sampleRate * 2 * numOfChan); // avg. bytes/sec
+    setUint16(numOfChan * 2);                      // block-align
+    setUint16(16);                                 // 16-bit (hardcoded in this demo)
+
+    setUint32(0x61746164);                         // "data" - chunk
+    setUint32(length - pos - 4);                   // chunk length
+
+    // write interleaved data
+    for(i = 0; i < abuffer.numberOfChannels; i++)
+      channels.push(abuffer.getChannelData(i));
+
+    while(pos < length) {
+      for(i = 0; i < numOfChan; i++) {             // interleave channels
+        sample = Math.max(-1, Math.min(1, channels[i][offset])); // clamp
+        sample = (0.5 + sample < 0 ? sample * 32768 : sample * 32767)|0; // scale to 16-bit signed int
+        view.setInt16(pos, sample, true);          // update data chunk
+        pos += 2;
+      }
+      offset++                                     // next source sample
+    }
+
+    // create Blob
+    return new Blob([buffer], {type: "audio/mpeg"});
+
+    function setUint16(data) {
+      view.setUint16(pos, data, true);
+      pos += 2;
+    }
+
+    function setUint32(data) {
+      view.setUint32(pos, data, true);
+      pos += 4;
+    }
+  }
+
   copyAndReturnSegment(region){
     this.cutSelection = copy(region,this.wavesurfer)
     // instance.loadDecodedBuffer(emptySegment);
 
-    var arraybuffer = bufferToWave(this.cutSelection,0,this.cutSelection.length);//Will create a new Blob with
+    var arraybuffer = this.bufferToWave(this.cutSelection,0,this.cutSelection.length);//Will create a new Blob with
     let url = URL.createObjectURL(arraybuffer)
     debugger
 
@@ -321,8 +376,8 @@ export default class WaveSurferWaveform extends React.Component {
     this.cutSelection = k.cutSelection
     this.wavesurfer.loadDecodedBuffer(newAudioBuffer);
 
-    // var arraybuffer = bufferToWave(newAudioBuffer,0,newAudioBuffer.length);//Will create a new Blob with
-    var arraybuffer = bufferToWave(this.cutSelection ,0,this.cutSelection.length);//Will create a new Blob with
+    // var arraybuffer = this.bufferToWave(newAudioBuffer,0,newAudioBuffer.length);//Will create a new Blob with
+    var arraybuffer = this.bufferToWave(this.cutSelection ,0,this.cutSelection.length);//Will create a new Blob with
     let url = URL.createObjectURL(arraybuffer)
 
     var audio = new Audio(url);
@@ -330,8 +385,6 @@ export default class WaveSurferWaveform extends React.Component {
     audio.volume = 0.5;
     audio.autoplay = true;
     document.body.appendChild(audio);
-    this.props.onSetCutSelection({cutSelection:this.cutSelection, key:this.state.pos})
-
   }
 
   pasteAndReturnAudioBuffer(){
@@ -422,7 +475,7 @@ export default class WaveSurferWaveform extends React.Component {
       // region.remove();
 
       this.selectedRegion = region
-      this.taskItemInContext = this.clickInsideElement( event, this.taskItemClassName );
+      /*this.taskItemInContext = this.clickInsideElement( event, this.taskItemClassName );
 
       if ( this.taskItemInContext ) {
         event.preventDefault();
@@ -431,7 +484,7 @@ export default class WaveSurferWaveform extends React.Component {
       } else {
         this.taskItemInContext = null;
         this.toggleMenuOff();
-      }
+      }*/
     });
 
     // this.wavesurfer.on('region-update-end', (region, event)=> {
@@ -458,47 +511,47 @@ export default class WaveSurferWaveform extends React.Component {
     //     : e.target.classList.remove('wavesurfer-dragover');
     // };
 
-    /*    var handlers = {
-          // Drop event
-          drop: function(e) {
-            toggleActive(e, false);
+/*    var handlers = {
+      // Drop event
+      drop: function(e) {
+        toggleActive(e, false);
 
-            // Load the file into wavesurfer
-            if (e.dataTransfer.files.length) {
-              this.wavesurfer.loadBlob(e.dataTransfer.files[0]);
-            } else {
-              this.wavesurfer.fireEvent('error', 'Not a file');
-            }
-          },
-
-          // Drag-over event
-          dragover: function(e) {
-            toggleActive(e, true);
-          },
-
-          // Drag-leave event
-          dragleave: function(e) {
-            toggleActive(e, false);
-          }
-        };
-
-        var dropTarget = document.querySelector('#drop');
-        Object.keys(handlers).forEach(function(event) {
-          dropTarget.addEventListener(event, handlers[event]);
-        });*/
-
-    /*    var taskItems = document.querySelectorAll(".wavesurfer-region");
-
-        for ( var i = 0, len = taskItems.length; i < len; i++ ) {
-          var taskItem = taskItems[i];
-          contextMenuListener(taskItem);
+        // Load the file into wavesurfer
+        if (e.dataTransfer.files.length) {
+          this.wavesurfer.loadBlob(e.dataTransfer.files[0]);
+        } else {
+          this.wavesurfer.fireEvent('error', 'Not a file');
         }
+      },
 
-        function contextMenuListener(el) {
-          el.addEventListener( "contextmenu", function(e) {
-            console.log(e, el);
-          });
-        }*/
+      // Drag-over event
+      dragover: function(e) {
+        toggleActive(e, true);
+      },
+
+      // Drag-leave event
+      dragleave: function(e) {
+        toggleActive(e, false);
+      }
+    };
+
+    var dropTarget = document.querySelector('#drop');
+    Object.keys(handlers).forEach(function(event) {
+      dropTarget.addEventListener(event, handlers[event]);
+    });*/
+
+/*    var taskItems = document.querySelectorAll(".wavesurfer-region");
+
+    for ( var i = 0, len = taskItems.length; i < len; i++ ) {
+      var taskItem = taskItems[i];
+      contextMenuListener(taskItem);
+    }
+
+    function contextMenuListener(el) {
+      el.addEventListener( "contextmenu", function(e) {
+        console.log(e, el);
+      });
+    }*/
     setTimeout(()=>{
       // contextRightClickModule.init(this.copyAndReturnSegment,this.cutAndReturnAudioBuffer,this.pasteAndReturnAudioBuffer)
       this.init()
@@ -599,11 +652,9 @@ export default class WaveSurferWaveform extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     debugger
-    if(nextProps.cutSelectionData){
-      if(nextProps.cutSelectionData.key !== this.props.id) {
-        if(JSON.stringify(this.cutSelection) !== JSON.stringify(nextProps.cutSelectionData.cutSelection)) {
-          this.cutSelection = nextProps.cutSelectionData.cutSelection
-        }
+    if(nextProps.cutSelectionData.key !== this.props.id) {
+      if(JSON.stringify(this.cutSelection) !== JSON.stringify(nextProps.cutSelectionData.cutSelection)) {
+        this.cutSelection = nextProps.cutSelectionData.cutSelection
       }
     }
     if(this.state.playing !== nextProps.playing){
@@ -632,36 +683,36 @@ export default class WaveSurferWaveform extends React.Component {
     return (
       <div>
         <div className='waveform'>
-          <div className="wave-timeline"/>
-          <div className='wave'/>
-          <button onClick={this.handleTogglePlay}>{this.state.playing ? 'Pause' : 'play'}</button>
-          <div className="row">
-            <div className="col-xs-1">
-              {/*<i className="glyphicon glyphicon-zoom-in"></i>*/}
-            </div>
-
-            <div className="col-xs-10">
-              <input id="slider" type="range" min="1" max="200" className={width100} onInput={(e)=>this.zoomWaveform(e)}/>
-            </div>
-
-            <div className="col-xs-1">
-              {/*<i className="glyphicon glyphicon-zoom-out"></i>*/}
-            </div>
+        <div className="wave-timeline"/>
+        <div className='wave'/>
+        <button onClick={this.handleTogglePlay}>{this.state.playing ? 'Pause' : 'play'}</button>
+        <div className="row">
+          <div className="col-xs-1">
+            {/*<i className="glyphicon glyphicon-zoom-in"></i>*/}
           </div>
-          <button className="btn btn-primary" onClick={()=>this.removeAllRegions()}>
-            {/*<i className="glyphicon glyphicon-play"></i>*/}
-            Remove All Regions
-          </button>
-          {/*<p className="lead pull-center" id="drop">
+
+          <div className="col-xs-10">
+            <input id="slider" type="range" min="1" max="200" className={width100} onInput={(e)=>this.zoomWaveform(e)}/>
+          </div>
+
+          <div className="col-xs-1">
+            {/*<i className="glyphicon glyphicon-zoom-out"></i>*/}
+          </div>
+        </div>
+        <button className="btn btn-primary" onClick={()=>this.removeAllRegions()}>
+          {/*<i className="glyphicon glyphicon-play"></i>*/}
+          Remove All Regions
+        </button>
+        {/*<p className="lead pull-center" id="drop">
           Drag'n'drop your
           <i className="glyphicon glyphicon-music"></i>-file
           here!
         </p>*/}
-          <button onClick={()=>this.copyAndReturnSegment(this.wavesurfer)}> Cut </button>
-          <button onClick={()=>this.pasteAndReturnAudioBuffer()}> Paste </button>
-          <button onClick={()=>this.cutAndReturnAudioBuffer(this.wavesurfer)}> Trim </button>
+        <button onClick={()=>this.copyAndReturnSegment(this.wavesurfer)}> Cut </button>
+        <button onClick={()=>this.pasteAndReturnAudioBuffer()}> Paste </button>
+        <button onClick={()=>this.cutAndReturnAudioBuffer(this.wavesurfer)}> Trim </button>
 
-        </div>
+      </div>
 
       </div>
 

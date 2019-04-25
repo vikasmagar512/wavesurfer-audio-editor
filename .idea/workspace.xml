@@ -2,86 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c88e5f50-6a9b-4e59-b309-7d74756d5e68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/react-waveform-playlist-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.storybook/addons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.storybook/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REACTAPP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/annotations.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/audio/251.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/audio/BassDrums30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/audio/Guitar30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/audio/PianoSynth30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/audio/Vocals30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/audio/sonnet.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/vocals.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/json/vocals.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vocals.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vocals30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Channel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ErrorBoundary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Playlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TimeScale.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Track.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TrackControls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Waveform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/waveSurferWaveform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contextMenuRightClick.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/important links" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loading/BlobLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loading/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loading/XHRLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loading/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/audio/BassDrums30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/audio/Guitar30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/audio/PianoSynth30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/audio/Vocals30.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/audio/sonnet.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/image/vocals.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/json/vocals.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/vocals.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/playout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/playout/webaudio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/cursor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/elan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/mediasession.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/microphone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/minimap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/regions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/spectrogram.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugin/timeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/conversions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/waveSurferOperation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stories/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/contextMenuOperations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/waveSurferWaveform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/waveSurferWaveform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/waveSurferOperation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/waveSurferOperation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -97,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            <state relative-caret-position="465">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -106,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/waveSurferWaveform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="455" column="7" lean-forward="true" selection-start-line="455" selection-start-column="7" selection-end-line="455" selection-end-column="7" />
+            <state relative-caret-position="508">
+              <caret line="333" lean-forward="true" selection-start-line="333" selection-end-line="333" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -118,20 +43,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/waveSurferOperation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="-514">
+              <caret line="7" column="51" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="51" />
+              <folding>
+                <element signature="n#!!block;n#copy#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contextMenuRightClick.js">
+        <entry file="file://$PROJECT_DIR$/src/utils/contextMenuOperations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="120" column="23" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="23" />
+            <state relative-caret-position="334">
+              <caret line="150" selection-start-line="150" selection-end-line="150" />
             </state>
           </provider>
         </entry>
@@ -139,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+            <state relative-caret-position="630">
+              <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -159,36 +87,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getattribut</find>
-      <find>addevent</find>
-      <find>cut</find>
-      <find>didmount</find>
-      <find>init()</find>
-      <find>toggleMenuOff</find>
-      <find>resizeListener</find>
-      <find>keyupListener</find>
-      <find>dblcl</find>
-      <find>init(</find>
-      <find>lert('paste')</find>
-      <find>menuItemListener</find>
-      <find>ickeElIsLink = k.clickInsideElement( e, k.contextMenuLink</find>
-      <find>nsideElement( e,</find>
-      <find>dbl</find>
-      <find>get_</find>
-      <find>click</find>
-      <find>preventDefault</find>
-      <find>contextListener</find>
-      <find>( this.taskItemInContex</find>
-      <find>is.taskItemInContex</find>
-      <find>taskItemInContext</find>
-      <find>.toggleMenuOn()</find>
-      <find>copyand</find>
-      <find>document.addEventListener( &quot;click&quot;</find>
+      <find>bufferToWave</find>
+      <find>.key</find>
+      <find>.addEventListener( &quot;contextmenu&quot;</find>
+      <find>f ( k.taskItemInCo</find>
+      <find>ntext = this.clickInsideElement( event, this</find>
+      <find>ickInsideElemen</find>
       <find>clickListener</find>
-      <find>clickInsideElement</find>
+      <find>dblcli</find>
+      <find>clickCoordsX</find>
+      <find>clickinsideele</find>
+      <find>dblclick</find>
+      <find>construc</find>
+      <find>toggleMenuOn</find>
+      <find>cons</find>
+      <find>contextliste</find>
+      <find>contextListener</find>
+      <find>menu</find>
+      <find>this.menu</find>
+      <find>init</find>
+      <find>taskitemclas</find>
+      <find>taskItemClassName</find>
+      <find>taskItemInContext</find>
+      <find>oggleMenuOff.bind(k)()</find>
+      <find>copyAndReturnSegment</find>
+      <find>pasteAndReturnAudioBuffer</find>
+      <find>props</find>
       <find>cutAndReturnAudioBuffer</find>
-      <find>create</find>
-      <find>node</find>
+      <find>ar original_channel_data = originalAudioBuffer.getChannelData(chan</find>
+      <find>riginalAudioBuffer.length + cutSelection.lengt</find>
+      <find>onSetCutSelection</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,14 +142,16 @@
         <option value="$PROJECT_DIR$/node_modules/wavesurfer.js/src/plugin/timeline.js" />
         <option value="$PROJECT_DIR$/src/important links" />
         <option value="$PROJECT_DIR$/src/components/Waveform.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/utils/waveSurferOperation.js" />
         <option value="$PROJECT_DIR$/src/contextMenuRightClick.js" />
-        <option value="$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js" />
-        <option value="$PROJECT_DIR$/src/components/waveSurferWaveform.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/utils/waveSurferOperation.js" />
+        <option value="$PROJECT_DIR$/src/components/waveSurferWaveform_Customized.js" />
+        <option value="$PROJECT_DIR$/src/utils/contextMenuOperations.js" />
+        <option value="$PROJECT_DIR$/src/components/waveSurferWaveform.js" />
       </list>
     </option>
   </component>
@@ -252,19 +182,6 @@
               <item name="react-waveform-playlist-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-waveform-playlist-master" type="462c0819:PsiDirectoryNode" />
               <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="waveform-playlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-waveform-playlist-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-waveform-playlist-master" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="waveform-playlist" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-waveform-playlist-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-waveform-playlist-master" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
               <item name="wavesurfer.js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -272,7 +189,15 @@
               <item name="react-waveform-playlist-master" type="462c0819:PsiDirectoryNode" />
               <item name="node_modules" type="462c0819:PsiDirectoryNode" />
               <item name="wavesurfer.js" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-waveform-playlist-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-waveform-playlist-master" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="wavesurfer.js" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="wavesurfer.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="react-waveform-playlist-master" type="b2602c69:ProjectViewProjectNode" />
@@ -289,6 +214,12 @@
               <item name="react-waveform-playlist-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-waveform-playlist-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-waveform-playlist-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-waveform-playlist-master" type="b2602c69:ProjectViewProjectNode" />
@@ -327,8 +258,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/utils" />
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/node_modules/wavesurfer.js" />
       <recent name="$PROJECT_DIR$/src/waveSurfer" />
     </key>
@@ -370,12 +301,16 @@
       <workItem from="1555346480463" duration="8141000" />
       <workItem from="1555431265790" duration="10092000" />
       <workItem from="1555519947897" duration="3621000" />
-      <workItem from="1555609323424" duration="1031000" />
+      <workItem from="1555609323424" duration="1623000" />
+      <workItem from="1555673524726" duration="12252000" />
+      <workItem from="1556044345993" duration="936000" />
+      <workItem from="1556047739761" duration="768000" />
+      <workItem from="1556131415105" duration="1701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137043000" />
+    <option name="totallyTimeSpent" value="153292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,7 +325,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20413026" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17156473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -404,7 +339,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.17994505" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.041208792" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -415,9 +350,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/web-audio-editor.js" />
-    <entry file="file://$PROJECT_DIR$/public/waveform-playlist.var.js" />
-    <entry file="file://$PROJECT_DIR$/public/web-audio-editor-fill.js" />
     <entry file="file://$PROJECT_DIR$/public/emitter.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/event-emitter/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -576,16 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TimeScale.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Track.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -594,9 +516,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Playlist.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Channel.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -650,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Waveform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="526" column="5" lean-forward="true" selection-start-line="526" selection-start-column="5" selection-end-line="526" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -688,18 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/waveSurferOperation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
-          <folding>
-            <element signature="n#!!block;n#paste#0" />
-            <element signature="n#!!block;n#cut#0" />
-            <element signature="n#!!block;n#copy#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -707,47 +604,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contextMenuRightClick.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/wavesurfer.js/dist/wavesurfer.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Playlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Waveform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2500">
+          <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#56149#59949#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TimeScale.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/waveSurferWaveform_Customized.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="466" column="29" lean-forward="true" selection-start-line="466" selection-start-column="29" selection-end-line="466" selection-end-column="29" />
+          <folding>
+            <element signature="e#2446#2869#0" />
+            <element signature="e#4632#4762#0" />
+            <element signature="e#4926#4974#0" />
+            <element signature="e#5436#6192#0" />
+            <element signature="e#6378#7271#0" />
+            <element signature="e#7960#9862#0" />
+            <element signature="e#9894#10453#0" />
+            <element signature="e#10487#11095#0" />
+            <element signature="e#11126#11265#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        <state relative-caret-position="465">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contextMenuRightClick.js">
+    <entry file="file://$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="120" column="23" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="23" />
+        <state relative-caret-position="630">
+          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/waveSurfer/Wavesurfer.js">
+    <entry file="file://$PROJECT_DIR$/src/utils/contextMenuOperations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        <state relative-caret-position="334">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/waveSurferOperation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-514">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="51" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="n#!!block;n#copy#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/waveSurferWaveform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="455" column="7" lean-forward="true" selection-start-line="455" selection-start-column="7" selection-end-line="455" selection-end-column="7" />
+        <state relative-caret-position="508">
+          <caret line="333" lean-forward="true" selection-start-line="333" selection-end-line="333" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

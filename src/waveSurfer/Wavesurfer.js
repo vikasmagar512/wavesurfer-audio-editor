@@ -2,7 +2,6 @@ import $ from "jquery";
 import React, { Component } from "react";
 
 import WaveSurferWaveform from "../components/waveSurferWaveform";
-import contextRightClickModule from "../contextMenuRightClick";
 class Wavesurferr extends Component {
   constructor(props){
     super(props);
@@ -14,13 +13,20 @@ class Wavesurferr extends Component {
         "./audio/BassDrums30.mp3",
         // "./audio/Vocals30.mp3"
       ],
+      cutSelection:null
     };
     this.changePlaying = this.changePlaying.bind(this);
+    this.onSetCutSelection = this.onSetCutSelection.bind(this);
   }
   changePlaying(id) {
     this.setState({
       playing: id,
     });
+  }
+  onSetCutSelection({cutSelection,key}){
+    debugger
+    console.log('this is ',this)
+    this.setState({cutSelectionData:{cutSelection, key }})
   }
   componentDidMount() {
 
@@ -38,7 +44,7 @@ class Wavesurferr extends Component {
             <div>
               <div className="post-content">
                 {this.state.recordings && this.state.recordings.map((src,key)=>(
-                  <WaveSurferWaveform key={key} id={key} src={src} playing={key === this.state.playing} onChange={this.changePlaying}/>
+                  <WaveSurferWaveform key={key} id={key} src={src} cutSelectionData={this.state.cutSelectionData} playing={key === this.state.playing} onChange={this.changePlaying} onSetCutSelection={this.onSetCutSelection} />
                 ))}
               </div>
               <nav id="context-menu" className="context-menu">
